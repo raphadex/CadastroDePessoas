@@ -1,0 +1,134 @@
+/* Reset e estilo básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =======================
+   Neon animado no título
+======================= */
+h1 {
+  font-size: 3em;
+  margin-bottom: 40px;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  transition: color 1s;
+  position: relative;
+  z-index: 1;
+}
+
+/* =======================
+   Formulário centralizado
+======================= */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #0ff;
+  position: relative;
+  z-index: 1;
+}
+
+/* =======================
+   Inputs flutuantes
+======================= */
+input {
+  width: 400px;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+input:hover {
+  border-color: #0ff;
+  box-shadow: 0 0 8px #0ff, 0 0 16px #0ff;
+  transform: scale(1.05);
+  background: rgba(0,255,255,0.12);
+}
+
+/* =======================
+   Textarea flutuante com hover de crescimento
+======================= */
+textarea {
+  width: 400px;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+textarea:hover {
+  transform: scale(1.05);
+  border-color: #0ff;
+  box-shadow: 0 0 8px #0ff, 0 0 16px #0ff;
+  background: rgba(0,255,255,0.12);
+}
+
+/* =======================
+   Botão flutuante neon
+======================= */
+button {
+  width: 200px;
+  padding: 12px;
+  background-color: #0ff;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+  animation: float 3s ease-in-out infinite;
+}
+
+button:hover {
+  color: #0ff;
+  background: transparent;
+  box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  transform: scale(1.05);
+}
+
+/* =======================
+   Flutuação vertical inputs, textarea e botão
+======================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* =======================
+   Mensagem de envio
+======================= */
+#msg {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
